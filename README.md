@@ -1,13 +1,4 @@
-# Two-Stage Operational Transconductance Amplifier (OTA)
-**UMC 0.18 µm | 1.8 V | Constant-gm Bias | Miller Compensation**
-
-This repository presents the complete design workflow of a **two-stage CMOS OTA** developed for the *Analog Integrated Circuits Laboratory (AICLAB) Midterm Project*. It includes the **final topology-only HSPICE netlist**, **specification table**, **pre- and post-layout simulation results**, and **layout verification**.  
-
-All publicly shared files are **technology-agnostic and sanitized** for open academic and professional portfolio use.
-
----
-
-## 1. Design Objective
+## Design Objective
 
 The goal of this project is to design and verify a **high-gain, unity-gain stable, low-power two-stage OTA** operating at **1.8 V** with the following objectives:
 
@@ -27,7 +18,7 @@ The OTA architecture consists of:
 
 ---
 
-## 2. Supply & Operating Conditions
+## Supply & Operating Conditions
 
 | Parameter | Value |
 |----------|-------|
@@ -36,11 +27,11 @@ The OTA architecture consists of:
 | Input Common-Mode Voltage | 1.2 V |
 | Output Common-Mode Target | 0.9 V |
 | Process | UMC 0.18 µm CMOS |
-| Temperature | 27 °C |
+| Temperature | 60 °C |
 
 ---
 
-## 3. Final Performance Summary (Pre-Layout vs. Post-Layout)
+## Final Performance Summary (Pre-Layout vs. Post-Layout)
 
 | Metric | Spec | Pre-Sim | Post-Sim |
 |--------|------|---------|----------|
@@ -57,29 +48,30 @@ The OTA architecture consists of:
 
 ---
 
-## 4. Circuit Architecture
+## Circuit Architecture
 
 - Stage 1: NMOS differential input pair with PMOS current-mirror load  
 - Stage 2: Common-source amplifier driving capacitive load  
-- Bias Network: Constant-gm reference generating PVT-robust bias currents  
+- Bias Network: Constant-gm reference generating stable bias currents  
 - Compensation: Miller capacitor (Cc) + series zero-nulling resistor (Rz)  
 
 This structure provides strong low-frequency gain while maintaining high unity-gain bandwidth and stable phase margin under load.
 
 ---
 
-## 5. Final Device Dimensions
+## Final Device Dimensions
 
-| Device | W/L (µm/µm) |
-|--------|-------------|
-| M1, M2 | 4.33 / 1 |
-| M3, M4 | 4 / 1 |
-| M5 | 2 / 1 |
-| M6 | 31.92 / 0.5 |
-| M7 | 10 / 0.5 |
-| M8, M9, M11, M13 | 1 / 1 |
-| M10 | 9 / 1 |
-| M12 | 0.37 / 1 |
+| Device | Unit W/L (µm/µm) | Multiplier (m) | Total Width (µm) |
+|--------|------------------|----------------|-----------------------------|
+| M1, M2 | 4.33 / 1 | 1 | 4.33 |
+| M3, M4 | 4 / 1 | 1 | 4 |
+| M5 | 1 / 1 | 2 | 2 |
+| M6 | 7.98 / 0.5 | 4 | 31.92 |
+| M7 | 5 / 0.5 | 2 | 10 |
+| M8, M9, M13 | 1 / 1 | 1 | 1 |
+| M10 | 3 / 1 | 3 | 9 |
+| M11 | 3 / 1 | 1 | 3 |
+| M12 | 0.37 / 1 | 1 | 0.37 |
 
 **Passive Components**
 
@@ -91,28 +83,3 @@ This structure provides strong low-frequency gain while maintaining high unity-g
 | Bias Resistor Network (Rg) | 93.6 kΩ |
 
 ---
-
-## 6. Layout Verification
-
-- ✅ DRC Clean  
-- ✅ LVS Matched  
-- ✅ Post-Layout RC Extraction Performed  
-- ✅ Final Area: **679.25 µm²**
-
-**Observed Pre- vs. Post-Layout Differences**
-
-Performance degradation after layout is mainly attributed to **parasitic capacitances and routing resistance**, which introduce additional non-dominant poles and slightly degrade large-signal behavior. Despite these effects, **all specifications remain fully satisfied**.
-
----
-
-## 7. Design Strategy Highlights
-
-- Miller capacitor selected to dominate parasitic poles and stabilize the second stage  
-- Constant-gm bias used to improve PVT robustness of transconductance  
-- Unity-gain bandwidth prioritized over raw DC gain  
-- Bias current optimized to balance **slew rate vs. power dissipation**  
-- Layout floorplanning focused on minimizing routing parasitics near high-impedance nodes  
-
-
-
-
