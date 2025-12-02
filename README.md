@@ -18,6 +18,12 @@ The OTA architecture consists of:
 
 ---
 
+## Architecture Overview
+
+![Two-Stage OTA Architecture](figures/architecture.png)
+
+---
+
 ## Supply & Operating Conditions
 
 | Parameter | Value |
