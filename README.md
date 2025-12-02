@@ -22,6 +22,13 @@ The OTA architecture consists of:
 
 ![Two-Stage OTA Architecture](figures/architecture.png)
 
+- Stage 1: NMOS differential input pair with PMOS current-mirror load  
+- Stage 2: Common-source amplifier driving capacitive load  
+- Bias Network: Constant-gm reference generating stable bias currents  
+- Compensation: Miller capacitor (Cc) + series zero-nulling resistor (Rz)  
+
+This structure provides strong low-frequency gain while maintaining high unity-gain bandwidth and stable phase margin under load.
+
 ---
 
 ## Supply & Operating Conditions
@@ -51,17 +58,6 @@ The OTA architecture consists of:
 | Input Offset Voltage | < 900 µV | 12.6 µV | −15.1 µV |
 | DC Power Dissipation | Minimize | 0.40 mW | 0.39 mW |
 | Layout Area | Minimize | — | **679.25 µm²** |
-
----
-
-## Circuit Architecture
-
-- Stage 1: NMOS differential input pair with PMOS current-mirror load  
-- Stage 2: Common-source amplifier driving capacitive load  
-- Bias Network: Constant-gm reference generating stable bias currents  
-- Compensation: Miller capacitor (Cc) + series zero-nulling resistor (Rz)  
-
-This structure provides strong low-frequency gain while maintaining high unity-gain bandwidth and stable phase margin under load.
 
 ---
 

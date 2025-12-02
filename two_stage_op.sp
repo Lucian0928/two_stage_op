@@ -22,7 +22,7 @@ m2  net59 vip  net57 vss n_18_mm  w=4.33e-6 l=1e-6  m=1
 * Tail Current & Bias Sink
 ***********************
 m5  net57 net54 vss  vss n_18_mm  w=1e-6    l=1e-6  m=2
-m15 net54 net54 vss  vss n_18_mm  w=1e-6    l=1e-6  m=1
+m8 net54 net54 vss  vss n_18_mm  w=1e-6    l=1e-6  m=1
 
 
 ***********************
@@ -57,10 +57,11 @@ m7  vout net54 vss  vss n_18_mm  w=5e-6    l=500e-9 m=2
 ***********************
 * Bias Resistor Network
 ***********************
-xr4 net2  net56 vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
-xr3 net1  net2  vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
-xr2 vdd   net1  vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
-xr1 vdd   net60 vdd rnhr1000_mm  lr=5.18e-6 wr=180e-9
+xrg1 net2  net56 vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
+xrg2 net1  net2  vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
+xrg3 vdd   net1  vdd rnhr1000_mm  lr=4.3e-6  wr=180e-9
+* Rg is implemented as a series connection of xrg1, xrg2, and xrg3  
+xrs vdd   net60 vdd rnhr1000_mm  lr=5.18e-6 wr=180e-9
 
 
 ***********************
