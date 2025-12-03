@@ -85,3 +85,9 @@ This structure provides strong low-frequency gain while maintaining high unity-g
 | Bias Resistor Network (Rg) | 93.6 kΩ |
 
 ---
+
+## AC Response (pre-simulation vs. post-simulation)
+
+![AC Response Pre](figures/ac_response_pre.png) ![AC Response Post](figures/ac_response_post.png)
+
+---
