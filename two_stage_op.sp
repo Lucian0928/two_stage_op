@@ -3,13 +3,15 @@
 * Topology-only HSPICE Netlist (Technology Independent)
 * Generated from Cadence Virtuoso Schematic
 *----------------------------------------------------------------
-* Supply Definition
-* VDD = 1.8 V, VSS = 0 V
-*----------------------------------------------------------------
+* Ports:
+*   VIN  - negative input
+*   VIP  - positive input
+*   VOUT - output
+*   VDD  - positive supply (1.8 V)
+*   VSS  - ground
+*================================================================
 
-VDD  vdd  0   DC 1.8
-VSS  vss  0   DC 0
-
+.SUBCKT two_stage_op VIN VIP VOUT VDD VSS
 
 ***********************
 * Differential Input Pair
@@ -71,4 +73,4 @@ xrz net61 net59 vdd rnhr1000_mm  lr=1.94e-6 wr=180e-9
 xcc net61 vout mimcaps_mm       w=20e-6 l=22.18e-6
 
 
-.END
+.ENDS
