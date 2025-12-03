@@ -104,3 +104,22 @@ This structure provides strong low-frequency gain while maintaining high unity-g
 </table>
 
 ---
+
+## Slew Rate (Pre-Simulation vs. Post-Simulation)
+
+<table>
+  <tr>
+    <td align="center"><b>Pre-Simulation</b></td>
+    <td align="center"><b>Post-Simulation</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="figures/tran_pre.png" width="380">
+    </td>
+    <td>
+      <img src="figures/tran_post.png" width="380">
+    </td>
+  </tr>
+</table>
+
+---
