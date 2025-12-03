@@ -26,10 +26,10 @@ VIN vin 0 DC 1.2 AC -0.5
 VIP vip 0 DC 1.2 AC  0.5
 
 * Load capacitance 
-CL  vout 0 5p
+CL vout 0 5p
 
 * OTA instance
-XOTA vin vip vout vdd 0 two_stage_op
+XOTA vin vip vout vdd vss two_stage_op
 
 * AC sweep
 .ac DEC 100 1 1e8
