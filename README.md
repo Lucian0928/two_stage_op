@@ -86,8 +86,21 @@ This structure provides strong low-frequency gain while maintaining high unity-g
 
 ---
 
-## AC Response (pre-simulation vs. post-simulation)
+## AC Response (Pre-Simulation vs. Post-Simulation)
 
-![AC Response Pre](figures/ac_response_pre.png) ![AC Response Post](figures/ac_response_post.png)
+<table>
+  <tr>
+    <td align="center"><b>Pre-Simulation</b></td>
+    <td align="center"><b>Post-Simulation</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="figures/ac_response_pre.png" width="380">
+    </td>
+    <td>
+      <img src="figures/ac_response_post.png" width="380">
+    </td>
+  </tr>
+</table>
 
 ---
