@@ -1,3 +1,4 @@
+*two_stage_op
 *================================================================
 * Two-Stage OTA with Constant-gm Bias
 * Topology-only HSPICE Netlist (Technology Independent)
