@@ -1,6 +1,6 @@
 * tb_dc_op.sp
 
-.option post
+.option post=2
 .temp 60
 
 VDD vdd 0 1.8
