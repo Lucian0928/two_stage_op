@@ -56,8 +56,8 @@ This structure provides strong low-frequency gain while maintaining high unity-g
 | Slew Rate (Rise / Fall) | > 25 V/µs | +43.67 / −28.13 | +43.5 / −27.45 |
 | Settling Time (Rise / Fall) | < 100 ns | 35.99 / 63.67 ns | 36.12 / 65.5 ns |
 | Input Offset Voltage | < 900 µV | 12.6 µV | −15.1 µV |
-| DC Power Dissipation | Minimize | 0.40 mW | 0.39 mW |
-| Layout Area | Minimize | — | **679.25 µm²** |
+| DC Power Dissipation | Optimize | 0.40 mW | 0.39 mW |
+| Layout Area | Optimize | — | **679.25 µm²** |
 
 ---
 
