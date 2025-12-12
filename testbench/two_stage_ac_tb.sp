@@ -1,11 +1,5 @@
 *ac_tb
-*===========================================================
-* Two-Stage OTA - AC Testbench
-* Includes:
-*   1) Differential AC Response (Open-Loop Gain / UGB / PM)
-*   2) CMRR (Common-Mode Rejection Ratio)
-*   3) PSRR (Power Supply Rejection from VDD)
-*-----------------------------------------------------------
+
 .option post=2
 .temp 60
 
